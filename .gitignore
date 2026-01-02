@@ -205,3 +205,18 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# --- MY CUSTOM ADDITIONS (System & Project) ---
+# OS Junk files (Windows/Mac)
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Code Editors
+.vscode/
+.idea/
+
+# Wireshark Capture Files (to avoid uploading large pcap files)
+*.pcap
+*.pcapng
+
