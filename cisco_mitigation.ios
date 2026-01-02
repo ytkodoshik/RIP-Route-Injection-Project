@@ -1,0 +1,19 @@
+! RIP MD5 Authentication Configuration
+! Prevents Route Injection Attacks
+
+! 1. Create a Key Chain
+configure terminal
+key chain RIP-KEYS
+ key 1
+  key-string ciscorip
+ exit
+exit
+
+! 2. Apply Authentication to Interfaces
+! Example for FastEthernet 0/0
+interface fastEthernet 0/0
+ ip rip authentication mode md5
+ ip rip authentication key-chain RIP-KEYS
+ exit
+
+! Repeat for other active interfaces
